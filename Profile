@@ -1,14 +1,14 @@
-//Миньков 22исп2-1 Базовый уровень 12 вариант 
+//Миньков 22исп2-1 Средний уровень уровень 12 вариант 
 
-char[] symb = new char[] { 's', 'r', '4', '%', '@', '#', '^', 't', '&', 'h', 'f', 'u' };
-int count = 0;
-bool b = false;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-foreach (char c in symb)
+var arr = Enumerable.Range('А', 32).ToArray();
+StringBuilder st = new StringBuilder();
+for (int i = 0; i < arr.Length; i++)
 {
-    if (c == '#') b = true;
-    if (b) count++;
+    st.Append((char)arr[i]);
 }
-
-Console.WriteLine($"Символов после \'#\': {count - 1}");
-Console.Read();
+Console.WriteLine(st.ToString());
